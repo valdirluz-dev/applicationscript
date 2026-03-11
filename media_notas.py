@@ -5,8 +5,12 @@ def calcular_media(notas):
 
 
 def main():
+    num_media = int(input ("Digite quantos numeros serão usados: "))
+    if num_media == 0:
+        raise ValueError ("o número de elementos não pode ser zero")
+
     notas = []
-    for i in range(1, 5):
+    for i in range(1, (num_media+1)):
         nota = float(input(f"Digite a nota {i}: "))
         notas.append(nota)
 
